@@ -104,6 +104,16 @@ class EntityTest extends \PHPUnit_Framework_TestCase
         $this->performEntityTest(\Picqer\Financials\Exact\GLAccount::class);
     }
 
+    public function testGoodsReceipts()
+    {
+        $this->performEntityTest(\Picqer\Financials\Exact\GoodsReceipts::class);
+    }
+
+    public function testGoodsReceiptLine()
+    {
+        $this->performEntityTest(\Picqer\Financials\Exact\GoodsReceiptLine::class);
+    }
+    
     public function testInvoiceSalesOrdersEntity()
     {
         $this->performEntityTest(\Picqer\Financials\Exact\InvoiceSalesOrder::class);
@@ -233,12 +243,17 @@ class EntityTest extends \PHPUnit_Framework_TestCase
     {
         $this->performEntityTest(\Picqer\Financials\Exact\StockPosition::class);
     }
-
-    public function testSubscriptionEntity()
+    
+    public function testStockBatchNumber()
     {
-        $this->performEntityTest(\Picqer\Financials\Exact\Subscription::class);
+        $this->performEntityTest(\Picqer\Financials\Exact\StockBatchNumber::class);
     }
 
+    public function testStockSerialNumber()
+    {
+        $this->performEntityTest(\Picqer\Financials\Exact\StockSerialNumber::class);
+    }
+    
     public function testSubscriptionLineEntity()
     {
         $this->performEntityTest(\Picqer\Financials\Exact\SubscriptionLine::class);
@@ -249,6 +264,11 @@ class EntityTest extends \PHPUnit_Framework_TestCase
         $this->performEntityTest(\Picqer\Financials\Exact\SubscriptionType::class);
     }
 
+    public function testSupplierItem()
+    {
+        $this->performEntityTest(\Picqer\Financials\Exact\SupplierItem::class);
+    }    
+    
     public function testTransactionEntity()
     {
         $this->performEntityTest(\Picqer\Financials\Exact\Transaction::class);
